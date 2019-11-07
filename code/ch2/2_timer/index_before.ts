@@ -1,4 +1,5 @@
 module ch2_2_timer_before {
+  declare var document: Document;
   var // Basics properties
     timerId = -1,
     interval = 25,
