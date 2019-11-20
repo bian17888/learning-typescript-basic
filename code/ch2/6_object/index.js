@@ -48,3 +48,4 @@ var ch2_6_object;
     var sq32 = squareIt3({ h: 10, w: 20 });
     console.log("rectangle h and w of 10 and 20 = " + sq32);
 })(ch2_6_object || (ch2_6_object = {}));
+//# sourceMappingURL=index.js.map

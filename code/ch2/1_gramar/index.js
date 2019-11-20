@@ -11,3 +11,4 @@ var ch2_1_gramar;
     }
     alert(addNumber(num1, num2, 520));
 })(ch2_1_gramar || (ch2_1_gramar = {}));
+//# sourceMappingURL=index.js.map

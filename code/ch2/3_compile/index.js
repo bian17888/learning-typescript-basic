@@ -9,3 +9,4 @@ var ch2_3_compile;
         age: 18
     };
 })(ch2_3_compile || (ch2_3_compile = {}));
+//# sourceMappingURL=index.js.map

@@ -63,3 +63,4 @@ var ch2_2_timer;
         init("startButton", "pauseButton", "clearButton");
     };
 })(ch2_2_timer || (ch2_2_timer = {}));
+//# sourceMappingURL=index.js.map

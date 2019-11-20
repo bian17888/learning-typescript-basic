@@ -39,3 +39,4 @@ var ch2_5_primitives;
     console.log(quanlity);
     console.log(company);
 })(ch2_5_primitives || (ch2_5_primitives = {}));
+//# sourceMappingURL=index.js.map

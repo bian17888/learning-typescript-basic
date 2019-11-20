@@ -12,3 +12,4 @@ var ch2_4_ambient_before;
     var value = guy.fullName();
     console.log(value);
 })(ch2_4_ambient_before || (ch2_4_ambient_before = {}));
+//# sourceMappingURL=index.js.map

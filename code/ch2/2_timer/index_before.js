@@ -59,3 +59,4 @@ var ch2_2_timer_before;
         init("startButton", "pauseButton");
     };
 })(ch2_2_timer_before || (ch2_2_timer_before = {}));
+//# sourceMappingURL=index_before.js.map

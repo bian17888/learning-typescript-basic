@@ -10,3 +10,4 @@ var ch2_3_compile_before;
     };
     alert(person.substring(1, 3));
 })(ch2_3_compile_before || (ch2_3_compile_before = {}));
+//# sourceMappingURL=index_before.js.map
