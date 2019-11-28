@@ -1,4 +1,4 @@
-class Car {
+class CarCh1 {
   engine: string;
 
   constructor(engine: string) {
@@ -15,7 +15,7 @@ class Car {
 }
 
 window.onload = function() {
-  var car = new Car("v8");
+  var car = new CarCh1("v8");
   car.start();
   car.stop();
 };
