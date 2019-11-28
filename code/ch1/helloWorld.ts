@@ -1,21 +1,23 @@
-class CarCh1 {
-  engine: string;
+module ch1_1_helloWorld {
+  class Car {
+    engine: string;
 
-  constructor(engine: string) {
-    this.engine = engine;
+    constructor(engine: string) {
+      this.engine = engine;
+    }
+
+    start() {
+      alert("Engine started : " + this.engine);
+    }
+
+    stop() {
+      alert("Engine stopped : " + this.engine);
+    }
   }
 
-  start() {
-    alert("Engine started : " + this.engine);
-  }
-
-  stop() {
-    alert("Engine stopped : " + this.engine);
-  }
+  window.onload = function() {
+    var car = new Car("v8");
+    car.start();
+    car.stop();
+  };
 }
-
-window.onload = function() {
-  var car = new CarCh1("v8");
-  car.start();
-  car.stop();
-};

@@ -1,19 +1,22 @@
 "use strict";
-var CarCh1 = /** @class */ (function () {
-    function CarCh1(engine) {
-        this.engine = engine;
-    }
-    CarCh1.prototype.start = function () {
-        alert("Engine started : " + this.engine);
+var ch1_1_helloWorld;
+(function (ch1_1_helloWorld) {
+    var Car = /** @class */ (function () {
+        function Car(engine) {
+            this.engine = engine;
+        }
+        Car.prototype.start = function () {
+            alert("Engine started : " + this.engine);
+        };
+        Car.prototype.stop = function () {
+            alert("Engine stopped : " + this.engine);
+        };
+        return Car;
+    }());
+    window.onload = function () {
+        var car = new Car("v8");
+        car.start();
+        car.stop();
     };
-    CarCh1.prototype.stop = function () {
-        alert("Engine stopped : " + this.engine);
-    };
-    return CarCh1;
-}());
-window.onload = function () {
-    var car = new CarCh1("v8");
-    car.start();
-    car.stop();
-};
+})(ch1_1_helloWorld || (ch1_1_helloWorld = {}));
 //# sourceMappingURL=helloWorld.js.map
