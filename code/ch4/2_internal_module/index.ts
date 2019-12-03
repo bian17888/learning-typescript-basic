@@ -1,22 +1,24 @@
-interface IRectangle {
-  height: number;
-  width: number;
-  getArea(): number;
-}
+namespace ch4_2_internal_module {
+  interface IRectangle {
+    height: number;
+    width: number;
+    getArea(): number;
+  }
 
-namespace Shapes {
-  export class Rectangle implements IRectangle {
-    constructor(public height: number, public width: number) {}
-    getArea() {
-      return this.height * this.width;
+  namespace Shapes {
+    export class Rectangle implements IRectangle {
+      constructor(public height: number, public width: number) {}
+      getArea() {
+        return this.height * this.width;
+      }
     }
   }
-}
 
-namespace myProgram {
-  init();
-  function init() {
-    var rect: IRectangle = new Shapes.Rectangle(10, 4);
-    alert(rect.getArea());
+  namespace myProgram {
+    init();
+    function init() {
+      var rect: IRectangle = new Shapes.Rectangle(10, 4);
+      alert(rect.getArea());
+    }
   }
 }
