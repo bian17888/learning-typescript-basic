@@ -1,6 +1,19 @@
 "use strict";
-var ch3_4_interfaces;
-(function (ch3_4_interfaces) {
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var ch3_5_extend_interfaces;
+(function (ch3_5_extend_interfaces) {
     /**Engine */
     var Engine = /** @class */ (function () {
         function Engine(hoursePower, engineType) {
@@ -22,22 +35,6 @@ var ch3_4_interfaces;
         };
         return Engine;
     }());
-    /**CustomEngine */
-    var CustomEngine = /** @class */ (function () {
-        function CustomEngine() {
-        }
-        CustomEngine.prototype.start = function (callback) {
-            window.setTimeout(function () {
-                callback(true, "Custom Engine");
-            }, 1000);
-        };
-        CustomEngine.prototype.stop = function (callback) {
-            window.setTimeout(function () {
-                callback(true, "Custom Engine");
-            }, 1000);
-        };
-        return CustomEngine;
-    }());
     /**Accessory */
     var Accessory = /** @class */ (function () {
         function Accessory(accessoryNumber, title) {
@@ -48,13 +45,13 @@ var ch3_4_interfaces;
     }());
     /**Auto */
     var Auto = /** @class */ (function () {
-        function Auto(basePrice, engine, state, make, model, year) {
-            this.basePrice = basePrice;
-            this.engine = engine;
-            this.state = state;
-            this.make = make;
-            this.model = model;
-            this.year = year;
+        function Auto(options) {
+            this.basePrice = options.basePrice;
+            this.engine = options.engine;
+            this.state = options.state;
+            this.make = options.make;
+            this.model = options.model;
+            this.year = options.year;
         }
         Auto.prototype.calculateTotal = function () {
             var taxRate = 0.08;
@@ -99,20 +96,30 @@ var ch3_4_interfaces;
         });
         return Auto;
     }());
+    var Truck = /** @class */ (function (_super) {
+        __extends(Truck, _super);
+        function Truck(options) {
+            var _this = _super.call(this, options) || this;
+            _this.bedLength = options.bedLength;
+            _this.fourByFour = options.fourByFour;
+            return _this;
+        }
+        return Truck;
+    }(Auto));
     window.onload = function () {
-        // todo : It will throw a error
-        // var engine = new CustomEngine();
-        // var auto = new Auto(40000, engine, "State", "Make", "Model", 2010);
-        // alert(auto.engine.engineType.toString());
-        // todo : There will still be errors, because new Auto accepts an IEngine type!
-        // var engine = new Engine(150, "V9");
-        // var auto = new Auto(40000, engine, "State", "Make", "Model", 2010);
-        // alert(auto.engine.hoursePower.toString());
-        // awesome
-        var engine = new Engine(150, "V9");
-        var auto = new Auto(40000, engine, "State", "Make", "Model", 2010);
-        var myEngine = auto.engine;
-        alert(myEngine.hoursePower.toString());
+        var engine = new Engine(400, "V8");
+        var truck = new Truck({
+            basePrice: 40000,
+            engine: engine,
+            state: "Arizona",
+            make: "Ford",
+            model: "F-150",
+            year: 2019,
+            bedLength: "short bed",
+            fourByFour: true
+        });
+        console.log(truck.bedLength);
+        console.log(truck.engine);
     };
-})(ch3_4_interfaces || (ch3_4_interfaces = {}));
+})(ch3_5_extend_interfaces || (ch3_5_extend_interfaces = {}));
 //# sourceMappingURL=index.js.map
